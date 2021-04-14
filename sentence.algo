@@ -1,10 +1,22 @@
 ALGORITHM sentence
 VAR
     paragraph : STRING ;
-    numberOfWord : INTEGER := 0 ;
+    numberOfWord , numberOfVowels : INTEGER := 0 ;
     longe : INTEGER ;
 
+
 BEGIN
-    Do 
+    REPEAT
     Read (paragraph);
+    UNTIL (paragraph[paragraph.length-1]=".")
+    FOR i FROM 1 TO paragraph.length STEP 1  DO
+        IF (paragraph[i]=" ") THEN
+            numberOfWord ++
+            write (numberOfWord)
+        END_IF
+        IF (paragraph[i]= "A" or "a" or "E" or "e" or "I" or "i" or "o" or "O" or "U" or "u") THEN
+            numberOfVowels ++
+            write(numberOfVowels)
+        END_IF
+    END_FOR
 END
