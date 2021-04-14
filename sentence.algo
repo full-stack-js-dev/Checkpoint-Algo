@@ -1,0 +1,10 @@
+ALGORITHM sentence
+VAR
+    paragraph : STRING ;
+    numberOfWord : INTEGER := 0 ;
+    longe : INTEGER ;
+
+BEGIN
+    Do 
+    Read (paragraph);
+END
